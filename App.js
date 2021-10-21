@@ -16,7 +16,6 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
 import {
   Colors,
   DebugInstructions,
@@ -24,34 +23,35 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
-import store from 'src/redux/store';
 import { Provider } from 'react-redux';
-/* stylelint-disable selector-type-case */
-/* stylelint-disable selector-type-no-unknwon */
 
-/* stylelint-disable */
+import store from './src/redux/store';
+
 const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
-    paddingHorizontal: 24,
   },
+
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
   },
+
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
   },
+
   highlight: {
     fontWeight: '700',
   },
 });
 
+// eslint-disable-next-line react/prop-types
 const Section = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark';
+
   return (
     <View style={styles.sectionContainer}>
       <Text

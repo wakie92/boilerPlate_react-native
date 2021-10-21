@@ -1,7 +1,9 @@
 module.exports = {
-  root: true,
+  env: {
+    browser: true,
+    es6: true,
+  },
   extends: [
-    '@react-native-community',
     'airbnb',
     'eslint:recommended',
     'plugin:import/errors',
@@ -12,7 +14,10 @@ module.exports = {
     'plugin:lodash-fp/recommended',
     'prettier',
   ],
-  globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: { jsx: true },
@@ -43,28 +48,6 @@ module.exports = {
     'no-secrets/no-secrets': 'error',
     'no-underscore-dangle': ['error', { allow: ['__REDUX_DEVTOOLS_EXTENSION__'] }],
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'prettier/prettier': [
-      'error',
-      {
-        arrowParens: 'avoid',
-        bracketSpacing: true,
-        endOfLine: 'lf',
-        htmlWhitespaceSensitivity: 'css',
-        insertPragma: false,
-        jsxBracketSameLine: false,
-        jsxSingleQuote: false,
-        printWidth: 100,
-        proseWrap: 'always',
-        quoteProps: 'as-needed',
-        requirePragma: false,
-        semi: true,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'all',
-        useTabs: false,
-        vueIndentScriptAndStyle: false,
-      },
-    ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -72,6 +55,8 @@ module.exports = {
     'react/jsx-curly-newline': 'off', // Conflicts with prettier
   },
   settings: {
-    'import/resolver': { node: { paths: ['.'] } },
+    'import/resolver': {
+      node: { paths: ['.'] },
+    },
   },
 };

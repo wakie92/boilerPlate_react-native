@@ -12,8 +12,8 @@
     "function-name-case": null,
     "indentation": null,
     "no-eol-whitespace": null,
-    "selector-type-case:" null,
-    "selector-type-no-unknwon": null,
+    "selector-type-case": null,
+    "selector-type-no-unknown": null,
     "value-keyword-case": null,
     "value-list-comma-newline-after": null
   }

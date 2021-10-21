@@ -12,6 +12,7 @@
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
+    "postinstall": "rndebugger-open",
     "start": "react-native start",
     "test": "jest"
   },
@@ -27,6 +28,7 @@
     "react-redux-toastr": "^7.6.5",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.3.3",
     "validator": "^13.6.0"
@@ -52,6 +54,7 @@
     "prettier": "^2.4.1",
     "prettier-eslint": "^13.0.0",
     "prettier-eslint-cli": "^5.0.1",
+    "react-native-debugger-open": "^0.3.25",
     "react-test-renderer": "17.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",

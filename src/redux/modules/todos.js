@@ -15,7 +15,16 @@ export function removeTodo(todo) {
   };
 }
 
-const todoReducer = (state = [], action) => {
+const initialState = {
+  todo: [
+    {
+      id: 0,
+      text: 'todos',
+    },
+  ],
+};
+
+const todoReducer = (state = initialState, action) => {
   const { type, text, todo } = action;
 
   switch (type) {
