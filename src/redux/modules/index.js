@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as toastr } from 'react-redux-toastr';
 
-// [Note]: auth should always loaded first to init Amplify config
 import todos from './todos';
 
 const reducers = {
