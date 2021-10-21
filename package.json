@@ -9,6 +9,7 @@
     "ios": "react-native run-ios",
     "jsLint": "eslint 'src/**/*.js'",
     "lint": "./node_modules/.bin/eslint --fix ./",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "pre-commit": "lint-staged",
     "prepare": "husky install",
     "start": "react-native start",
