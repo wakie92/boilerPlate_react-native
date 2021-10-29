@@ -19,9 +19,10 @@ const App = () => {
   };
 
   /** webview 로딩 완료시 */
+  // eslint-disable-next-line no-unused-vars
   const handleEndLoading = syntheticEvent => {
     // eslint-disable-next-line no-console
-    console.log('handleEndLoading', syntheticEvent);
+    console.log('handleEndLoading');
 
     /** rn에서 웹뷰로 정보를 보내는 메소드 */
     webviewRef.postMessage('로딩 완료시 webview로 정보를 보내는 곳');
