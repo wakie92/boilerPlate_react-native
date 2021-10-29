@@ -12,6 +12,10 @@ target 'boilerplate_RN' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'boilerplate_RNTests' do
     inherit! :complete
     # Pods for testing

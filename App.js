@@ -6,112 +6,35 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import { Provider } from 'react-redux';
-
-import store from './src/redux/store';
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-  },
-
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-// eslint-disable-next-line react/prop-types
-const Section = ({ children, title }) => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}
-      >
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}
-      >
-        {children}
-      </Text>
-    </View>
-  );
-};
+import React, { useRef } from 'react';
+import WebviewContainer from './src/components/shared/WebviewContainer';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  // 웹뷰와 rn과의 소통은 아래의 ref 값을 이용하여 이루어집니다.
+  let webviewRef = useRef();
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  /** 웹뷰 ref */
+  const handleSetRef = _ref => {
+    webviewRef = _ref;
+  };
+
+  /** webview 로딩 완료시 */
+  const handleEndLoading = syntheticEvent => {
+    // eslint-disable-next-line no-console
+    console.log('handleEndLoading', syntheticEvent);
+
+    /** rn에서 웹뷰로 정보를 보내는 메소드 */
+    webviewRef.postMessage('로딩 완료시 webview로 정보를 보내는 곳');
   };
 
   return (
-    <Provider store={store}>
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-          <Header />
-          <View
-            style={{
-              backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            }}
-          >
-            <Section title="Step One">
-              Edit <Text style={styles.highlight}>App.js</Text> to change this screen and then come
-              back to see your edits.
-            </Section>
-            <Section title="See Your Changes">
-              <ReloadInstructions />
-            </Section>
-            <Section title="Debug">
-              <DebugInstructions />
-            </Section>
-            <Section title="Learn More">Read the docs to discover what to do next:</Section>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Provider>
+    <>
+      <WebviewContainer
+        webviewRef={webviewRef}
+        handleSetRef={handleSetRef}
+        handleEndLoading={handleEndLoading}
+      />
+    </>
   );
 };
 

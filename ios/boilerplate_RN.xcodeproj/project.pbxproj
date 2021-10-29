@@ -13,6 +13,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		5E7F1909A19FAE6A32CCD90D /* libPods-boilerplate_RN-boilerplate_RNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA80A5B11128E4AE2A914D4 /* libPods-boilerplate_RN-boilerplate_RNTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		822A02CF272A9303001E7A36 /* SplachScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822A02CE272A9303001E7A36 /* SplachScreen.storyboard */; };
+		822A02D3272AAD2E001E7A36 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822A02D2272AAD2E001E7A36 /* SplashScreen.storyboard */; };
 		C49E4253C6752D31AE5410D1 /* libPods-boilerplate_RN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ADFC25BB24D1B2932DB923 /* libPods-boilerplate_RN.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		44ADFC25BB24D1B2932DB923 /* libPods-boilerplate_RN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplate_RN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA80A5B11128E4AE2A914D4 /* libPods-boilerplate_RN-boilerplate_RNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplate_RN-boilerplate_RNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = boilerplate_RN/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		822A02CE272A9303001E7A36 /* SplachScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplachScreen.storyboard; sourceTree = "<group>"; };
+		822A02D2272AAD2E001E7A36 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		AF6813EAB79113B8592EEC21 /* Pods-boilerplate_RN-boilerplate_RNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_RN-boilerplate_RNTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate_RN-boilerplate_RNTests/Pods-boilerplate_RN-boilerplate_RNTests.release.xcconfig"; sourceTree = "<group>"; };
 		C59196EF2E09C3AF8B018A78 /* Pods-boilerplate_RN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_RN.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate_RN/Pods-boilerplate_RN.debug.xcconfig"; sourceTree = "<group>"; };
 		D80D35336E77896628647B4C /* Pods-boilerplate_RN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate_RN.release.xcconfig"; path = "Target Support Files/Pods-boilerplate_RN/Pods-boilerplate_RN.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +108,6 @@
 				1A1DAF7795F0557BB6BA8CE1 /* Pods-boilerplate_RN-boilerplate_RNTests.debug.xcconfig */,
 				AF6813EAB79113B8592EEC21 /* Pods-boilerplate_RN-boilerplate_RNTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +131,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				822A02D2272AAD2E001E7A36 /* SplashScreen.storyboard */,
+				822A02CE272A9303001E7A36 /* SplachScreen.storyboard */,
 				13B07FAE1A68108700A75B9A /* boilerplate_RN */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* boilerplate_RNTests */,
@@ -243,6 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822A02CF272A9303001E7A36 /* SplachScreen.storyboard in Resources */,
+				822A02D3272AAD2E001E7A36 /* SplashScreen.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -484,7 +491,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92K9FKS8TQ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = boilerplate_RN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,8 +506,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.boilerplate-RN";
 				PRODUCT_NAME = boilerplate_RN;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -510,7 +521,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92K9FKS8TQ;
 				INFOPLIST_FILE = boilerplate_RN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,8 +535,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.boilerplate-RN";
 				PRODUCT_NAME = boilerplate_RN;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
