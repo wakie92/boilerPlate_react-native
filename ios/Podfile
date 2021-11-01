@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target 'boilerplate_RN' do
+target 'feHanbitcoMobileApp' do
   config = use_native_modules!
 
   use_react_native!(
@@ -16,7 +16,7 @@ target 'boilerplate_RN' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
-  target 'boilerplate_RNTests' do
+  target 'feHanbitcoMobileAppTests' do
     inherit! :complete
     # Pods for testing
   end
