@@ -506,7 +506,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.boilerplate-RN";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.fe-hanbitco-mobile-app";
 				PRODUCT_NAME = feHanbitcoMobileApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -535,7 +535,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.boilerplate-RN";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.fe-hanbitco-mobile-app";
 				PRODUCT_NAME = feHanbitcoMobileApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
